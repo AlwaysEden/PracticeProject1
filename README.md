@@ -10,7 +10,7 @@
 <img src = 'https://github.com/AlwaysEden/PracticeProject1/blob/master/screenshot/%E1%84%83%E1%85%A1%E1%86%AB%E1%84%8B%E1%85%A5%20%E1%84%8E%E1%85%AE%E1%84%80%E1%85%A1%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB.png?raw=true'>
 
 ## 3. 모든 단어 보기 실행화면
-<img src = 'https://github.com/AlwaysEden/PracticeProject1/blob/master/screenshot/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202022-09-07%20%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB%2011.48.56.png?raw=true' style = "width = 300; height = 300">
+<img src = 'https://github.com/AlwaysEden/PracticeProject1/blob/master/screenshot/%E1%84%86%E1%85%A9%E1%84%83%E1%85%B3%E1%86%AB%20%E1%84%83%E1%85%A1%E1%86%AB%E1%84%8B%E1%85%A5%E1%84%87%E1%85%A9%E1%84%80%E1%85%B5%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB.png?raw=true'>
 
 ## 4. 나가기 실행화면
 <img src = 'https://github.com/AlwaysEden/PracticeProject1/blob/master/screenshot/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202022-09-07%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%201.08.29.png?raw=true'>
