@@ -6,7 +6,7 @@ public class WordManager {
     Scanner sc = new Scanner(System.in);
     WordCRUD wordCRUD;
     WordManager(){
-        wordCRUD = new WordCRUD(sc);
+        wordCRUD = new WordCRUD();
     }
     public int selectMenu(){
         System.out.println("*** 영단어 마스터 ***");
@@ -34,7 +34,7 @@ public class WordManager {
             if(menu == 4) {
                 wordCRUD.addWord();
             }else if(menu == 1){
-
+                wordCRUD.listAll();
             }
         }
     }
