@@ -6,8 +6,9 @@ public class WordCRUD implements ICRUD{
     ArrayList<Word> list;
     Scanner sc = new Scanner(System.in);
 
-    WordCRUD(){ //현재 생성자 파라미터로 있었던 Scanner를 뺀 상태. 어떤 영향이 있을까 탐구 중.
+    WordCRUD(Scanner s){ //현재 생성자 파라미터로 있었던 Scanner를 뺀 상태. 어떤 영향이 있을까 탐구 중.
         list = new ArrayList<>();
+        this.sc = s;
     }
     @Override
     public Object add() { //데이터 타입이 클래스인 메소드. 그래서 리턴값도 클래스이다. 내가 원하던 그림.

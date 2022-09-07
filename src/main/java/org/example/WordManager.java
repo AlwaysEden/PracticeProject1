@@ -3,10 +3,11 @@ package org.example;
 import java.util.Scanner;
 
 public class WordManager {
+
     Scanner sc = new Scanner(System.in);
     WordCRUD wordCRUD;
     WordManager(){
-        wordCRUD = new WordCRUD();
+        wordCRUD = new WordCRUD(sc);
     }
     public int selectMenu(){
         System.out.println("*** 영단어 마스터 ***");
@@ -30,7 +31,10 @@ public class WordManager {
     public void start(){
         while(true) {
             int menu = selectMenu();
-            if(menu == 0) break;
+            if(menu == 0) {
+                System.out.println("프로그램 종료 다음에 만나요~!");
+                break;
+            }
             if(menu == 4) {
                 wordCRUD.addWord();
             }else if(menu == 1){
