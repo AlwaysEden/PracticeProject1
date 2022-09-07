@@ -1,5 +1,5 @@
 # PracticeProject1
-
+PracticeProject1은 Java로 Create, Reading, Update, Delete를 구현하는 프로젝트입니다.
 
 ## 1. Hello world!! 실행화면
 
