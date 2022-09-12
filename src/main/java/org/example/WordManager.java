@@ -39,6 +39,10 @@ public class WordManager {
                 wordCRUD.addWord();
             }else if(menu == 1){
                 wordCRUD.listAll();
+            }else if(menu ==5) {
+                wordCRUD.updateWord();
+            }else if(menu ==6){
+                wordCRUD.deleteWord();
             }
         }
     }
