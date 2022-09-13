@@ -1,10 +1,14 @@
 package org.example;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+
 public class WordCRUD implements ICRUD{
     ArrayList<Word> list;
     Scanner sc = new Scanner(System.in);
+    final String fname = "dictionary.txt";
 
     WordCRUD(Scanner s){ //WordCURD 생성자에서 Scanner를 파라미터로 두는 이유는 여러 클래스에서 Scanner를 선언해놓고 사용하는게 비효율적인 의도인거 같다고 설명해주셨다. by TA
         //하지만 나의 의견은 생성자에 이렇게 선언해두고 사용할거라면 WordManager클래스에서 Scanner선언 안하고 WordCRUD를 통해서 사용하면 될거 같은데 물어봐야겠다.
@@ -82,7 +86,7 @@ public class WordCRUD implements ICRUD{
         }
         System.out.println("---------------------");
     }
-    public ArrayList<Integer> listAll(String keyword){ //5. 단어 수정에서 수정할 단어를 검색했을 때 그 단어가 포함된 단어만 출력해야한다.
+    public ArrayList<Integer> listAll(String keyword){
         ArrayList<Integer> idlist = new ArrayList<>();
         int j = 0;
         System.out.println("---------------------");
@@ -97,6 +101,68 @@ public class WordCRUD implements ICRUD{
         }
         System.out.println("---------------------");
         return idlist;
+    }
+
+    public void listAll(int level){
+        int j = 0;
+        System.out.println("---------------------");
+        for(int i = 0; i < list.size(); i++){
+            int ilevel = list.get(i).getLevel();
+            if(ilevel == level) {
+                System.out.print((j + 1) + " ");
+                System.out.println(list.get(i).toString());
+                j++;
+            }
+        }
+        System.out.println("---------------------");
+    }
+
+    public void loadfile(){
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(fname));
+            int count = 0;
+            while (true) {
+                String line = br.readLine();
+                if (line == null) break;
+                String data[] = line.split("\\|");
+
+                int level = Integer.parseInt(data[0]);
+                String word = data[1];
+                String meaning = data[2];
+                list.add(new Word(0, word, level, meaning));
+                count++;
+            }
+            System.out.println("==> " + count + "개 로딩완료!!!");
+            br.close();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    public void saveFile() {
+        try {
+            PrintWriter pr = new PrintWriter(new FileWriter(fname));
+            for(Word one: list) {
+                pr.write(one.toFileString() + "\n");
+            }
+            pr.close();
+            System.out.println("=> 데이터 저장 완료!!!");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void searchLevel() {
+        int i = 0;
+        System.out.println("=> 원하는 레벨은? (1~3)");
+        int level = sc.nextInt();
+        listAll(level);
+    }
+
+    public void searchWord() {
+        System.out.println("=> 원하는 단어는? ");
+        String word = sc.next();
+        listAll(word);
     }
 }
 

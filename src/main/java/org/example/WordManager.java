@@ -29,20 +29,27 @@ public class WordManager {
     }
 
     public void start(){
+        wordCRUD.loadfile();
         while(true) {
             int menu = selectMenu();
             if(menu == 0) {
                 System.out.println("프로그램 종료 다음에 만나요~!");
                 break;
             }
-            if(menu == 4) {
+            if(menu == 4) { //단어 추가
                 wordCRUD.addWord();
-            }else if(menu == 1){
+            }else if(menu == 1){ //모든 단어 출력
                 wordCRUD.listAll();
-            }else if(menu ==5) {
+            }else if(menu == 5) { //단어 수정
                 wordCRUD.updateWord();
-            }else if(menu ==6){
+            }else if(menu == 6){ //단어 삭제
                 wordCRUD.deleteWord();
+            }else if(menu == 7){ //단어 저장
+                wordCRUD.saveFile();
+            }else if(menu == 2){ //수준별 단어 출력
+                wordCRUD.searchLevel();
+            }else if(menu == 3){//단어 검색
+                wordCRUD.searchWord();
             }
         }
     }
