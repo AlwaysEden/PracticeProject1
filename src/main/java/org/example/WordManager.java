@@ -3,11 +3,9 @@ package org.example;
 import java.util.Scanner;
 
 public class WordManager {
-
-    Scanner sc = new Scanner(System.in);
     WordCRUD wordCRUD;
     WordManager(){
-        wordCRUD = new WordCRUD(sc);
+        wordCRUD = new WordCRUD(new Scanner(System.in)); //Scanner가 여러 클래스 속에 선언될 필요가 없어보여서 WordManager클래스에서는 Scanner를 익명 객체로 선언해주었고 Scanner 기능을 사용하기 위해서는 WordCRUD클래스에서 가져와서 사용하기로 하였다.
     }
     public int selectMenu(){
         System.out.println("*** 영단어 마스터 ***");
@@ -24,12 +22,11 @@ public class WordManager {
         System.out.println("*****************");
         System.out.println("=> 원하는 메뉴는? ");
 
-        int menu = sc.nextInt();
-        return menu;
+        return wordCRUD.sc.nextInt();
     }
 
     public void start(){
-        wordCRUD.loadfile();
+        wordCRUD.loadFile();
         while(true) {
             int menu = selectMenu();
             if(menu == 0) {
