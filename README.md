@@ -6,7 +6,8 @@ PracticeProject1은 Java로 Create, Reading, Update, Delete를 구현하는 프�
 
 ## 2. Hello world!! 실행화면
 
-<img src = 'https://github.com/AlwaysEden/PracticeProject1/blob/master/screenshot/%EC%B2%AB%20%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4%20%EC%BA%A1%EC%B3%90.png?raw=true'>
+<img src = 'https://github.com/AlwaysEden/PracticeProject1/blob/master/screenshot/Hello%20world%20screenshot.png?raw=true![image](https://user-images.githubusercontent.com/87646333/190430842-dae858aa-d39b-43f1-a9e2-003d67f07d3a.png)
+'>
 
 ## 3. 단어 추가 실행화면
 
