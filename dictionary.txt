@@ -4,4 +4,4 @@
 2|executive|경영 간부, 임원
 1|stock|주식, 재고
 2|seagull|갈매기
-3| element|원소
+3|element|원소
